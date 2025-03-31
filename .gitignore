@@ -1,4 +1,3 @@
-ar-lib
 *.Plo
 *.Po
 *.la
@@ -7,16 +6,20 @@ ar-lib
 Makefile
 Makefile.in
 aclocal.m4
+ar-lib
 autom4te.cache
 compile
+config.guess
 config.log
 config.status
+config.sub
 configure
 doc/Makefile.in
 doc/mhash.3
 include/Makefile.in
 include/mutils/mhash_config.h
 include/mutils/mhash_config.h.in
+install-sh
 lib/Makefile.in
 libtool
 ltmain.sh

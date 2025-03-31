@@ -97,7 +97,7 @@ typedef unsigned char mutils_word8;
  */
 
 #if defined(HAVE__BOOL)
-#define mutils_boolean _Bool
+#define mutils_boolean bool
 #else
 typedef char mutils_boolean;
 #endif

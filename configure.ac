@@ -39,7 +39,6 @@ AC_C_BIGENDIAN
 
 dnl Miscellaneous checks
 
-AC_CONST
 AC_C_CONST
 
 LT_INIT([win32-dll])

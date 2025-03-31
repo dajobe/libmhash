@@ -23,6 +23,7 @@ install-sh
 lib/Makefile.in
 libtool
 ltmain.sh
+missing
 src/Makefile.in
 src/driver
 src/frag_test

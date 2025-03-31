@@ -72,7 +72,7 @@ int main()
 		return(MUTILS_INVALID_RESULT);
 	}
 
-	mutils_free(tmp);
+	/* mutils_free(tmp); */
 
 	/* Test No 2 */	
 	

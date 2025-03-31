@@ -4,4 +4,4 @@ EXTRA_DIST = mhash.spec.in mhash.spec
 USE_MHASH_CONFIG = yes
 
 ChangeLog:
-	cvs2cl --utc --fsf -t -S --prune
+	@echo "No ChangeLog automation from git yet"

@@ -6,7 +6,7 @@ AC_CONFIG_SRCDIR([lib/mhash.c])
 AM_INIT_AUTOMAKE
 
 AC_DEFINE([MHASH_VERSION], PROGRAM_VERSION, "MHash Version")
-AC_CONFIG_HEADERS([include/mutils/mhash_config.h])
+AC_CONFIG_HEADERS([include/mutils/config.h include/mutils/mhash_config.h])
 
 
 dnl Check system.

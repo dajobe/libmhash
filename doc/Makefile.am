@@ -1,5 +1,5 @@
 
-EXTRA_DIST = mhash.pod md5-rfc1321.txt \
+EXTRA_DIST = mhash.pod \
 		mhash.html mhash.0 mhash.3 skid2-authentication example.c
 
 man_MANS = $(srcdir)/mhash.3
@@ -13,12 +13,12 @@ MAINTAINERCLEANFILES=$(dist_targets)
 dist-hook: mhash-doc
 
 mhash-doc: $(dist_targets)
-	
+
 $(srcdir)/mhash.html: $(srcdir)/mhash.pod
 	pod2html --noindex --netscape --title="mhash library" $< | sed 's/MHASH_VERSION/@MHASH_VERSION@/' > $@
 
 $(srcdir)/mhash.0: $(srcdir)/mhash.3
-	nroff -man $< > $@
+	groff -man $< > $@
 
 $(srcdir)/mhash.3: $(srcdir)/mhash.pod
 	pod2man $(PODPARAMS) $< | sed 's/MHASH_VERSION/@MHASH_VERSION@/' > $@

@@ -3,7 +3,8 @@ AC_PREREQ([2.72])
 AC_INIT([MHASH],[0.9.9],[mhash-devel@sourceforge.net])
 AC_CANONICAL_TARGET
 AC_CONFIG_SRCDIR([lib/mhash.c])
-AM_INIT_AUTOMAKE
+AC_CONFIG_MACRO_DIR([m4])
+AM_INIT_AUTOMAKE([foreign -Wall])
 
 AC_DEFINE([MHASH_VERSION], PROGRAM_VERSION, "MHash Version")
 AC_CONFIG_HEADERS([include/mutils/config.h include/mutils/mhash_config.h])
@@ -22,6 +23,7 @@ AC_PROG_CC_C_O
 AC_PROG_CXX
 AC_PROG_INSTALL
 AC_PROG_LN_S
+AM_PROG_AR
 
 dnl Check Make characteristics
 AC_PROG_MAKE_SET
@@ -37,6 +39,7 @@ AC_C_BIGENDIAN
 
 dnl Miscellaneous checks
 
+AC_CONST
 AC_C_CONST
 
 LT_INIT([win32-dll])
@@ -47,11 +50,11 @@ dnl Checks for headers
 
 AC_HEADER_STDBOOL
 
-AC_CHECK_HEADERS(sys/endian.h sys/stat.h sys/types.h sys/mman.h)
-AC_CHECK_HEADERS(assert.h byteswap.h dlfcn.h ctype.h errno.h)
-AC_CHECK_HEADERS(endian.h fcntl.h inttypes.h limits.h)
-AC_CHECK_HEADERS(malloc.h unistd.h utime.h values.h)
-AC_CHECK_HEADERS(signal.h stdint.h stdio.h stdlib.h string.h strings.h)
+AC_CHECK_HEADERS([sys/endian.h sys/stat.h sys/types.h sys/mman.h])
+AC_CHECK_HEADERS([assert.h byteswap.h dlfcn.h ctype.h errno.h])
+AC_CHECK_HEADERS([endian.h fcntl.h inttypes.h limits.h])
+AC_CHECK_HEADERS([malloc.h unistd.h utime.h values.h])
+AC_CHECK_HEADERS([signal.h stdint.h stdio.h stdlib.h string.h strings.h])
 
 dnl Checks for functions
 
